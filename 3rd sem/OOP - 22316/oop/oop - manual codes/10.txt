@@ -1,0 +1,34 @@
+#include<iostream.h>
+#include<conio.h>
+Class student
+{
+Private:
+Char name [25];
+Int roll;
+Float height, weight;
+Public:
+Student ()
+{
+Strcpy (name, “ram”);
+roll=0;
+height=0;
+weight=0;
+}
+Void display ()
+{
+Cout<<”\n name :”<< name;
+Cout<<”\n roll no”<<roll;
+Cout<<”\n Height”<<height;
+Cout<<”\n weight”<<weight;
+}
+~ Student ()
+{
+Cout<<”\n destroying object”;
+}
+};
+Void main ()
+{
+Student obj;
+Obj. Student ();
+getch ();
+}

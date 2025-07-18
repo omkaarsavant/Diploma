@@ -1,0 +1,49 @@
+#include<stdio.h>
+#define size 2
+int queue[size],front=-1,rear=-1;
+void insert(int item){
+
+    if(rear==size-1){
+    printf("Queue is full \n");
+}
+else{
+     if(front==-1){
+            front=0;
+     }
+     rear=rear+1;
+     queue[rear]=item;
+     printf("Element Inserted %d\n",item);
+}
+}
+void delete(){
+    if(front==-1){
+        printf("Queue is Empty\n");
+    }
+    else{
+        printf("Element is deleted %d\n",queue[front]);
+        front=front+1;
+        if(front>rear){
+            front=-1;
+            rear=-1;
+        }
+    }
+}
+void display(){
+    if(rear==-1)
+        printf("Queue is empty\n");
+    else{
+        int i;
+        printf("Queue:");
+        for(i=front;i<=rear;i++)
+            printf("%d",queue[i]);
+
+    }
+}
+int main()
+{
+    display();
+    insert(1);
+    insert(2);
+    delete();
+    return 0;
+}

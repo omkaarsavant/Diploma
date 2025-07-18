@@ -1,0 +1,41 @@
+//6-1
+#include<iostream.h>
+#include<stdio.h>
+#include<conio.h>
+class BOOK
+{
+int BOOKNO;
+char BOOKTITLE[20];
+float PRICE;
+void TOTAL_COST(int N)
+{
+float tcost;
+tcost=PRICE*N;
+cout<<tcost;
+}
+public:
+void INPUT()
+{
+cout<<"Enter Book Number ";
+cin>>BOOKNO;
+cout<<"Enter Book Title ";
+gets(BOOKTITLE);
+cout<<"Enter price per copy ";
+cin>>PRICE;
+}
+void PURCHASE()
+{
+int n;
+cout<<"Enter number of copies to purchase ";
+cin>>n;
+cout<<"Total cost is ";
+TOTAL_COST(n);
+}
+};
+void main()
+{
+BOOK obj;
+obj.INPUT();
+obj.PURCHASE();
+getch();
+}

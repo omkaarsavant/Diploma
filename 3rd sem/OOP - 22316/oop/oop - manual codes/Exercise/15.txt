@@ -1,0 +1,58 @@
+//15
+#include<iostream.h>
+    #include<stdio.h>
+    #include<conio.h>
+class Shape
+    {
+     protected :
+     double x0, y0;
+     public :
+     void getdata(double x, double y)
+     {
+     x0 = x;
+     y0 = y;
+     }
+     virtual void displayArea() = 0;
+    };
+    class Triangle : public Shape
+    {
+     public :
+     void getdata(double x, double y)
+     {
+     Shape :: getdata(x,y);
+     }
+     void displayArea()
+     {
+     double area = (x0 * y0)/2.0;
+     cout << "\n Area of triangle = " << area;
+     }
+    };
+    class Rectangle : public Shape
+    {
+     public :
+     void getdata(double x, double y)
+     {
+     Shape :: getdata(x,y);
+     }
+     void displayArea()
+     {
+     double area = (x0 * y0);
+     cout << "\n Area of rectangle = " << area;
+     }
+    };
+    void main()
+    {
+     Triangle *tptr;
+     Rectangle *rptr;
+     Shape *sptr[2];
+     int i;
+     tptr = new Triangle;
+     rptr = new Rectangle;
+     tptr->getdata(20.0,30.0);
+     rptr->getdata(20.0,20.0);
+     sptr[0] = tptr;
+     sptr[1] = rptr;
+     for(i=0; i<2; i++)
+     sptr[i]->displayArea();
+     getch();
+    }

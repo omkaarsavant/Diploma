@@ -1,0 +1,98 @@
+1]
+
+CREATE TABLE Login (
+    login_ID int,
+    login_username varchar(255),
+    user_password varchar(255)
+)
+INSERT INTO Login (login_ID,login_username,user_password)
+VALUES ('100','Joseph75','joseph699');
+
+/* After 5 statements */
+
+2]
+
+ Select * from Login
+
+3]
+
+CREATE TABLE User (
+    user_ID int,
+    user_name varchar(255),
+    user_mobile int,
+    user_email varchar(255),
+    user_city varchar(255)
+);    
+
+4]
+
+INSERT INTO User (user_ID,user_name,user_mobile,user_email,user_city)
+VALUES ('200','Joseph Joestar','45236781','joseph699@gmail.com','Amasterdam');
+
+/* After 5 statements */
+
+5]
+
+SELECT * FROM [User]
+
+6]
+
+CREATE TABLE Patient (
+    pat_ID int,
+    pat_name varchar(255),
+    pat_mobile int,
+    pat_email varchar(255),
+    pat_bloodgrp varchar(255),
+    pat_city varchar(255)
+);   
+
+7]
+
+INSERT INTO Patient (pat_ID,pat_name,pat_mobile,pat_email,pat_bloodgrp,pat_city)
+VALUES ('300','Tommy Simons','7654579238','tommyinit45@gmail.com','B+ve','London');
+
+/* After 5 statements */
+
+8]
+SELECT * FROM [Patient]
+
+9]
+CREATE TABLE Donor (
+    donr_ID int,
+    donr_name varchar(255),
+    donr_mobile int,
+    donr_email varchar(255),
+    donr_bloodgrp varchar(255),
+    donr_city varchar(255)
+);  
+
+10]
+
+INSERT INTO Donor(donr_ID,donr_name,donr_mobile,donr_email,donr_bloodgrp,donr_city)
+VALUES ('400','Nick Armstrong','8746387','sapnap23@gmail.com','AB-ve','California');
+
+/* After 5 statements */
+
+11]
+SELECT * FROM [Donor]
+
+12]
+CREATE TABLE BloodStock (
+    blood_grp varchar(255),
+    quantity int,
+    avaiblity varchar(255)
+);  
+
+13]
+
+INSERT INTO BloodStock(blood_grp,quantity,avaiblity)
+VALUES ('A+ve','50 L','Vast');
+
+/* After 5 statements */
+
+14]
+SELECT * FROM [BloodStock]
+
+
+
+

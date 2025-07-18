@@ -1,0 +1,128 @@
+//login.vb
+Public Class Login
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        Label1.TextAlign = ContentAlignment.MiddleCenter
+
+    End Sub
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If TextBox1.Text = "Omkar" And
+        TextBox2.Text = "OMKAR123" Then
+            MsgBox("Welcome to Blog", MsgBoxStyle.ApplicationModal, "Blog")
+            Main.Show()
+            Visible = False
+
+        Else
+            MsgBox("Wrong Username or Password!", MsgBoxStyle.Exclamation, "Blog")
+        End If
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        End
+    End Sub
+End Class
+
+//main.vb
+Public Class Main
+    Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        IsMdiContainer = True
+        Me.Text = "Welcome"
+    End Sub
+
+    Private Sub RoomToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RoomToolStripMenuItem.Click
+        Dim fm2 As New CreateBlog
+        fm2.MdiParent = Me
+        fm2.Show()
+    End Sub
+
+    Private Sub OtherServicesToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles OtherServicesToolStripMenuItem1.Click
+        Dim fm3 As New Blogstatus
+        fm3.MdiParent = Me
+        fm3.Show()
+    End Sub
+
+    Private Sub CancelRoomToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CancelRoomToolStripMenuItem1.Click
+        Dim fm4 As New OtherServices
+        fm4.MdiParent = Me
+        fm4.Show()
+    End Sub
+
+    Private Sub ContactUsToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ContactUsToolStripMenuItem1.Click
+        Dim fm5 As New DeleteBlog
+        fm5.MdiParent = Me
+        fm5.Show()
+    End Sub
+
+    Private Sub ContactUsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ContactUsToolStripMenuItem.Click
+        Dim fm6 As New ContactUs
+        fm6.MdiParent = Me
+        fm6.Show()
+    End Sub
+End Class
+
+//createblog.vb
+Public Class CreateBlog
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Close()
+    End Sub
+
+    Private Sub Save_Click(sender As Object, e As EventArgs) Handles Save.Click
+        If CheckBox1.Checked = True Then
+            MsgBox("Data Saved!, your Blog ID is 69", MsgBoxStyle.Information, "Blog")
+            Close()
+        Else
+            MsgBox("Please Check the Agree Terms and Condition Box", MsgBoxStyle.Information, "Blog")
+
+        End If
+
+    End Sub
+
+End Class
+
+//deleteblog.vb
+Public Class DeleteBlog
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        MsgBox("Your Room has been successfully Canceled", MsgBoxStyle.Information, " Nourriture pour le plaisir")
+        Visible = False
+    End Sub
+End Class1
+
+//otherservice.vb
+Public Class OtherServices
+    Private Sub OtherServices_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        MsgBox("Data Saved", MsgBoxStyle.Information, "Blog")
+        Visible = False
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Close()
+    End Sub
+End Class
+
+//contactus.vb
+Public Class ContactUs
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        MsgBox("Sent!", MsgBoxStyle.Information, " Nourriture pour le plaisir")
+        Visible = False
+    End Sub
+End Class
+
+//blogstatus.vb
+Public Class Blogstatus
+    Private Sub Roomstatus_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+    End Sub
+End Class

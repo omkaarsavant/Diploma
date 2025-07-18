@@ -1,0 +1,42 @@
+//13
+#include <iostream.h>
+#include<conio.h>
+class Area
+{
+  public:
+    float area(float l,float b)
+    {
+        return l*b;
+    }
+};
+class Perimeter
+{
+  public:
+    float peri(float l,float b)
+    {
+        return 2*(l+b);
+    }
+};
+class Rectangle : private Area, private Perimeter
+{
+    private:
+        float length, breadth;
+    public:
+       Rectangle() : length(0.0), breadth(0.0) { }
+       void get_data( )
+       {
+           cout<<"Enter length: ";
+           cin>>length;
+           cout<<"Enter breadth: ";
+           cin>>breadth;
+       }       
+};
+
+int main()
+{
+    Rectangle r;
+    r.get_data();
+    cout<<"Area = "<<r.area_calc();
+    cout<<"\nPerimeter = "<<r.peri_calc();
+    return 0;
+}

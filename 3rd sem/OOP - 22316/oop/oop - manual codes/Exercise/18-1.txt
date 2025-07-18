@@ -1,0 +1,81 @@
+#include<iostream.h>
+ #include<conio.h>
+ void swap(int &,int &);
+ void swap(float &,float &);
+ void swap(char &,char &);
+ main()
+    {
+       clrscr();
+       int int_1;
+       int int_2;
+       float float_1;
+       float float_2;
+       char char_1;
+       char char_2;
+       cout<<\"\\n ********* Data Type - int  **********\"<<endl;
+       cout<<\"\\n Enter the value of int_1 = \";
+       cin>>int_1;
+       cout<<\"\\n Enter the value of int_2 = \";
+       cin>>int_2;
+       cout<<\"\\n ********* Data Type - floatt  **********\"<<endl;
+       cout<<\"\\n Enter the value of floatt_1 = \";
+       cin>>float_1;
+       cout<<\"\\n Enter the value of float_2 = \";
+       cin>>float_2;
+       cout<<\"\\n ********* Data Type - char  **********\"<<endl;
+       cout<<\"\\n Enter the value of char_1 = \";
+       cin>>char_1;
+       cout<<\"\\n Enter the value of char_2 = \";
+       cin>>char_2;
+       getch();
+       clrscr();
+       cout<<\"\\n ********* Before Swap()  **********\"<<endl;
+       cout<<\"\\n Values of int :\"<<endl;
+       cout<<\"\\t\\t Value of int_1 = \"<<int_1<<endl;
+       cout<<\"\\t\\t Value of int_2 = \"<<int_2<<endl;
+       cout<<\" Values of float :\"<<endl;
+       cout<<\"\\t\\t Value of float_1 = \"<<float_1<<endl;
+       cout<<\"\\t\\t Value of float_2 = \"<<float_2<<endl;
+       cout<<\" Values of  char :\"<<endl;
+       cout<<\"\\t\\t Value of char_1 = \"<<char_1<<endl;
+       cout<<\"\\t\\t Value of char_2 = \"<<char_2<<endl;
+       cout<<\"\\n ********* After Swap()  **********\"<<endl;
+ cout<<\"\\n Values of int :\"<<endl;
+       swap(int_1,int_2);
+       cout<<\"\\t\\t Value of int_1 = \"<<int_1<<endl;
+       cout<<\"\\t\\t Value of int_2 = \"<<int_2<<endl;
+cout<<\" Values of float :\"<<endl;
+       swap(float_1,float_2);
+       cout<<\"\\t\\t Value of float_1 = \"<<float_1<<endl;
+       cout<<\"\\t\\t Value of float_2 = \"<<float_2<<endl;
+cout<<\" Values of  char :\"<<endl;
+       swap(char_1,char_2);
+       cout<<\"\\t\\t Value of char_1 = \"<<char_1<<endl;
+       cout<<\"\\t\\t Value of char_2 = \"<<char_2<<endl;
+getch();
+       return 0;
+    }
+void swap(int &value_1,int &value_2)
+    {
+       int temp;
+
+       temp=value_2;
+       value_2=value_1;
+       value_1=temp;
+    }
+ void swap(float &value_1,float &value_2)
+    {
+       float temp;
+
+       temp=value_2;
+       value_2=value_1;
+       value_1=temp;
+    }
+void swap(char &value_1,char &value_2)
+    {
+       char temp;
+
+       temp=value_2;
+       value_2=value_1;
+       value_1=temp;
+    }

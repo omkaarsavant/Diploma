@@ -1,0 +1,27 @@
+#include<iostream>
+
+using namespace std;
+
+# define pi 3.14
+
+int main()
+ 
+{
+     
+     int r,b,a;
+
+     cout<<"Enter Radius of circle:"<<endl;
+
+     cin>>r;
+
+     b=r*r;
+
+     a=b*pi;
+
+     double ans;
+
+     ans = (double)a;
+
+     cout<<"Area of Circle:"<<a<<endl;
+
+ }
